@@ -13,8 +13,6 @@ services:
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/eventmanagement
       - DEBUG=True
-      - SECRET_KEY=your_secret_key_here
-
   db:
     image: postgres:14
     volumes:

@@ -11,14 +11,14 @@ class AuthenticationTests(APITestCase):
         # Create a test user for login tests
         self.test_user = User.objects.create_user(
             username='testuser',
-            email='test@example.com',
+            email='test@gmail.com',
             password='testpassword123'
         )
 
         # Registration data
         self.register_data = {
             'username': 'newuser',
-            'email': 'newuser@example.com',
+            'email': 'newuser@gmail.com',
             'password': 'newuserpassword123',
             'password2': 'newuserpassword123',
             'first_name': 'New',
@@ -38,7 +38,7 @@ class AuthenticationTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(User.objects.count(), 2)
-        self.assertEqual(User.objects.get(username='newuser').email, 'newuser@example.com')
+        self.assertEqual(User.objects.get(username='newuser').email, 'newuser@gmail.com')
 
     def test_user_login(self):
         """Test user login and token generation endpoint"""

@@ -12,13 +12,13 @@ class EventTests(APITestCase):
         # Create two users
         self.user1 = User.objects.create_user(
             username='user1',
-            email='user1@example.com',
+            email='user1@gmail.com',
             password='password123'
         )
 
         self.user2 = User.objects.create_user(
             username='user2',
-            email='user2@example.com',
+            email='user2@gmail.com',
             password='password123'
         )
 
